@@ -1,24 +1,20 @@
-//#include<iostream>
-//using namespace std;
-//
-//int main()
-//{
-//	int a, b, c;
-//	cin >> a >> b >> c;
-//
-//	if (b + c < 60)
-//	{
-//		b += c;
-//	}
-//	else if (b + c >= 60)
-//	{
-//		if (a == 23) {
-//
-//		}
-//		else
-//		{
-//			b += c - 60;
-//			a++;
-//		}
-//	}
-//}
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	int a, b, c, d;
+	cin >> a >> b >> c;
+	d = b + c;
+
+	a += c / 60;
+	b += c % 60;
+	if (b >= 60) {
+		a += 1;
+		b -= 60;
+	}
+	if (a >= 24) {
+		a -= 24;
+	}
+	cout << a << " " << b;
+}
